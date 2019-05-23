@@ -9,4 +9,12 @@ Django 2.2.2 fixes several bugs in 2.2.1.
 Bugfixes
 ========
 
-* ...
+* Fixed a regression in Django 2.2 that stopped Show/Hide toggles working on
+  dynamically added admin inlines (:ticket:`30459`).
+
+* Fixed a regression in Django 2.2 where deprecation message crashes if
+  ``Meta.ordering`` contains an expression (:ticket:`30463`).
+
+* Fixed a regression in Django 2.2.1 where
+  :class:`~django.contrib.postgres.search.SearchVector` generates SQL with a
+  redundant ``Coalesce`` call (:ticket:`30488`).

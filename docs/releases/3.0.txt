@@ -96,7 +96,9 @@ Minor features
 :mod:`django.contrib.sessions`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* ...
+* The new
+  :meth:`~django.contrib.sessions.backends.base.SessionBase.get_session_cookie_age()`
+  methods allows dynamically specifying the session cookie age.
 
 :mod:`django.contrib.sitemaps`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -119,7 +121,7 @@ Minor features
 * Added the ``language`` class attribute to the
   :class:`django.contrib.syndication.views.Feed` to customize a feed language.
   The default value is :func:`~django.utils.translation.get_language()` instead
-  of setting:`LANGUAGE_CODE`.
+  of :setting:`LANGUAGE_CODE`.
 
 Cache
 ~~~~~
@@ -253,6 +255,9 @@ Tests
   :meth:`~django.test.SimpleTestCase.assertHTMLEqual`, now treats text, character
   references, and entity references that refer to the same character as
   equivalent.
+
+* Django test runner now supports headless mode for selenium tests on supported
+  browsers. Add the ``--headless`` option to enable this mode.
 
 URLs
 ~~~~
